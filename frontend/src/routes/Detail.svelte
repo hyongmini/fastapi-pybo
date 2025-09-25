@@ -170,7 +170,7 @@
             </div>
             <div class="my-3">
                 <button class="btn btn-sm btn-outline-secondary"
-                    on:click={() => vote_answer(answer.id)}"> 
+                    on:click={() => vote_answer(answer.id)}> 
                     추천
                     <span class="badge rounded-pill bg-success">{ answer.voter.length }</span>
                 </button>
