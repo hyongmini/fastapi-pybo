@@ -170,7 +170,7 @@
             </div>
             <div class="my-3">
                 <button class="btn btn-sm btn-outline-secondary"
-                    on:click={() => vote_answer(answer.id)}> 
+                    on:click="{vote_answer(answer.id)}"> 
                     추천
                     <span class="badge rounded-pill bg-success">{ answer.voter.length }</span>
                 </button>
@@ -189,10 +189,10 @@
     <form method="post" class="my-3">
         <div class="mb-3">
             <textarea rows="10" bind:value={content} 
-                disabled={!$is_login}
-                class="form-control"></textarea>
+                disabled={$is_login ? "" : "disabled"}
+                class="form-control" />
         </div>
         <input type="submit" value="답변등록" class="btn btn-primary {$is_login ? '' : 'disabled'}" 
-            on:click|preventDefault={post_answer} />
+            on:click="{post_answer}" />
     </form>
 </div>
