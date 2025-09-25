@@ -7,9 +7,6 @@ from starlette.config import Config
 config = Config('.env')
 SQLALCHEMY_DATABASE_URL = config('SQLALCHEMY_DATABASE_URL')
 
-
-SQLALCHEMY_DATABASE_URL = "sqlite:///./myapi.db"
-
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
 )
